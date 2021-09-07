@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Make Prediction</title>
+    <style>
+        .bg-gra-03 {
+            background: -webkit-gradient(linear, left bottom, left top, from(#fbc2eb), to(#a18cd1));
+            background: -webkit-linear-gradient(bottom, #fbc2eb 0%, #a18cd1 100%);
+            background: -moz-linear-gradient(bottom, #fbc2eb 0%, #a18cd1 100%);
+            background: -o-linear-gradient(bottom, #fbc2eb 0%, #a18cd1 100%);
+            background: linear-gradient(to top, #fbc2eb 0%, #a18cd1 100%);
+
+        }
+
+        body {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            height: 100vh;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container  my-5 my-4">
+        <form method='POST'>
+            {% csrf_token %}
+
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <h3><label class="fw-light text-white m-0">Cap Surface</label></h3>
+                    <select id="inputState" class="form-control" name="capSurface">
+                        <option selected="selected">Choose option</option>
+                        <option value="0">fibrous</option>
+                        <option value="1">grooves</option>
+                        <option value="2">smooth</option>
+                        <option value="3">scaly</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-4">
+                    <h3> <label class="fw-light text-white m-0">Cap Colour</label></h3>
+                    <select id="inputState" class="form-control" name="capColor">
+                        <option selected="selected">Choose option</option>
+                        <option value="0">buff</option>
+                        <option value="1">cinnamon</option>
+                        <option value="2">red</option>
+                        <option value="3">gray</option>
+                        <option value="4">brown</option>
+
+                        <option value="5">pink</option>
+                        <option value="6">green</option>
+                        <option value="7">purple</option>
+
+                        <option value="8">white</option>
+                        <option value="9">yellow</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-4">
+                    <h3> <label class="fw-light text-white m-0">Bruishes</label></h3>
+                    <select id="inputState" class="form-control" name="bruishes">
+                        <option selected="selected">Choose option</option>
+                        <option value="0">no</option>
+                        <option value="1">bruishes</option>
+                    </select>
+                </div>
+
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <h3><label class="fw-light text-white m-0">Odour</label></h3>
+                    <select id="inputState" class="form-control" name="odour">
+                        <option selected="selected">Choose option</option>
+                        <option value="0">almond</option>
+                        <option value="1">creosote</option>
+                        <option value="2">foul</option>
+                        <option value="3">anise</option>
+                        <option value="4">musty</option>
+                        <option value="6">pungent</option>
+                        <option value="7">spicy</option>
+                        <option value="8">fishy</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-4">
+                    <h3> <label class="fw-light text-white m-0">Gill Size</label></h3>
+                    <select id="inputState" class="form-control" name="gillSize">
+                        <option selected="selected">Choose option</option>
+                        <option value="0">broad</option>
+                        <option value="1">narrow</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-4">
+                    <h3><label class="fw-light text-white m-0">Gill Colour</label></h3>
+                    <select id="inputState" class="form-control" name="gillColour">
+                        <option selected="selected">Choose option</option>
+                        <option value="0">buff</option>
+                        <option value="1">red</option>
+                        <option value="2">gray</option>
+                        <option value="3">chocolate</option>
+                        <option value="4">black</option>
+                        <option value="5">brown</option>
+                        <option value="6">orange</option>
+                        <option value="7">pink</option>
+                        <option value="8">green</option>
+                        <option value="9">purple</option>
+                        <option value="10">white</option>
+                        <option value="11">yellow</option>
+                    </select>
+                </div>
+
+            </div>
+            <div class="form-row">
+
+                <div class="form-group col-md-4">
+                    <h3> <label class="fw-light text-white m-0">Stalk Shape</label></h3>
+                    <select id="inputState" class="form-control" name="stalkShape">
+                        <option selected="selected">Choose option</option>
+                        <option value="0">enlarging</option>
+                        <option value="1">tapering</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-4">
+                    <h3> <label class="fw-light text-white m-0">Stalk Root</label></h3>
+                    <select id="inputState" class="form-control" name="stalkRoot">
+                        <option selected="selected">Choose option</option>
+                        <option value="1">bulbous</option>
+                        <option value="2">club</option>
+                        <option value="3">equal</option>
+                        <option value="4">rhizomorphs</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-4">
+                    <h3> <label class="fw-light text-white m-0">Stalk Surface Below Ring</label></h3>
+                    <select id="inputState" class="form-control" name="surfaceBelow">
+                        <option selected="selected">Choose option</option>
+                        <option value="0">fibrous</option>
+                        <option value="1">silky</option>
+                        <option value="3">scaly</option>
+                        <option value="2">smooth</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+
+                <div class="form-group col-md-4">
+                    <h3> <label class="fw-light text-white m-0">Stalk Colour Above Ring</label></h3>
+                    <select id="inputState" class="form-control" name="colorAbove">
+                        <option selected="selected">Choose option</option>
+                        <option value="0">buff</option>
+                        <option value="1">cinnamon</option>
+                        <option value="2">red</option>
+                        <option value="3">gray</option>
+                        <option value="4">brown</option>
+                        <option value="5">orange</option>
+                        <option value="6">pink</option>
+                        <option value="7">white</option>
+                        <option value="8">yellow</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-4">
+                    <h3> <label class="fw-light text-white m-0">Stalk Colour Below Ring</label></h3>
+                    <select id="inputState" class="form-control" name="colorBelow">
+                        <option selected="selected">Choose option</option>
+                        <option value="0">buff</option>
+                        <option value="1">cinnamon</option>
+                        <option value="2">red</option>
+                        <option value="3">gray</option>
+                        <option value="4">brown</option>
+                        <option value="5">orange</option>
+                        <option value="6">pink</option>
+                        <option value="7">white</option>
+                        <option value="8">yellow</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-4">
+                    <h3> <label class="fw-light text-white m-0">Spore Print Colur</label></h3>
+                    <select id="inputState" class="form-control" name="sporePrint">
+                        <option selected="selected">Choose option</option>
+                        <option value="0">buff</option>
+                        <option value="1">chocolate</option>
+                        <option value="2">black</option>
+                        <option value="3">brown</option>
+                        <option value="4">orange</option>
+                        <option value="5">green</option>
+                        <option value="6">purple</option>
+                        <option value="7">white</option>
+                        <option value="8">yellow</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+
+
+                <div class="form-group col-md-4">
+                    <h3> <label class="fw-light text-white m-0">Population</label></h3>
+                    <select id="inputState" class="form-control" name="population">
+                        <option selected="selected">Choose option</option>
+                        <option value="0">abundant</option>
+                        <option value="1">clustered</option>
+                        <option value="2">numerous</option>
+                        <option value="3">scattered</option>
+                        <option value="4">several</option>
+                        <option value="5">solitary</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-4">
+                    <h3> <label class="fw-light text-white m-0">Habitat</label></h3>
+                    <select id="inputState" class="form-control" name="habitat">
+                        <option selected="selected">Choose option</option>
+                        <option value="1">grasses</option>
+                        <option value="2">leaves</option>
+                        <option value="3">meadows</option>
+                        <option value="4">paths</option>
+                        <option value="5">urban</option>
+                        <option value="6">waste</option>
+                        <option value="0">woods</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

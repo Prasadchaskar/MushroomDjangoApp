@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% block title %}Description{% endblock title %}
+
+{% block body %}
+    <!-- Basic -->
+    <div class="ex-basic-1 pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-10 offset-xl-1">
+                    <div class="text-box mt-5 mb-5">
+                        <p class="p-large">The Mushroom classification system is a machine learning-based supervised
+                            classification model which will help us
+                            to detect which mushroom is poisonous & which is edible.</p>
+                    </div> <!-- end of text-box -->
+
+                    <h2 class="mb-3">1.Problem Statement</h2>
+                    <p>The Audubon Society Field Guide to North American Mushrooms contains descriptions of hypothetical samples corresponding to 23 species of gilled mushrooms in
+                         the Agaricus and Lepiota Family Mushroom (1981). Each species is labelled as either definitely edible,
+                          definitely poisonous, or maybe edible but not recommended. This last category was merged with the toxic category. 
+                         </p>
+                    <p class="mb-5"> The Guide asserts unequivocally that there is no simple rule for judging a mushroom's edibility, such as "leaflets three, leave it be" for Poisonous Oak and Ivy.
+                        The main goal is to predict which mushroom is poisonous & which is edible.</p>
+
+                    <h2 class="mb-3">2. Proposed Solution</h2>
+                    <p>The solution proposed here is to classify mushrooms for above problem statement. Before assuming that any wild mushroom is edible, it should be identified.</p>
+                    <p class="mb-4">Accurate determination and proper identification of a species is the only safe way to ensure edibility, and the only safeguard against possible accident.</p>
+
+                    <h2 class="mb-3">3. Further Improvements</h2>
+                    <p class="mb-5">With the help of above system we can able to categorize edible and poisonous mushrooms based on various features like mushroom cap-colour, odour, habitat etc.</p>
+                   
+                    <h2 class="mb-3">4. Data Requirements</h2>
+                    <p class="mb-4">Data requirement completely depend on our problem statement</p>
+                    <ul class="list-unstyled li-space-lg mb-5">
+                        <li class="media">
+                            <strong>1.</strong>
+                            <div class="media-body">The dataset includes descriptions of hypothetical samples corresponding to 23 species of gilled mushrooms in the Agaricus and Lepiota Family Mushroom drawn from The Audubon Society Field Guide to North American Mushrooms (1981).</div>
+                        </li>
+                        <li class="media">
+                            <strong>2.</strong>
+                            <div class="media-body">Each species is identified as definitely edible, definitely poisonous, or of unknown edibility and not recommended. This latter class was combined with the poisonous one.</div>
+                        </li>
+                        <li class="media">
+                            <strong>3.</strong>
+                            <div class="media-body">The Guide clearly states that there is no simple rule for determining the edibility of a mushroom; no rule like "leaflets three, let it be'' for Poisonous Oak and Ivy.</div>
+                        </li>
+                       
+                    </ul>
+                    <h2 class="mb-3">4. Tools Used</h2>
+                    <p class="mb-4">Most Essential Tools</p>
+                    <ul class="list-unstyled li-space-lg mb-5">
+                        <li class="media">
+                            <strong>1.</strong>
+                            <div class="media-body"><strong>Pandas -</strong> Pandas is a Python library used for working with data sets.It has functions for analyzing, cleaning, exploring, and manipulating data.</div>
+                        </li>
+                        <li class="media">
+                            <strong>2.</strong>
+                            <div class="media-body"><strong>Matplotlib -</strong>Matplotlib is an amazing visualization library in Python for 2D plots of arrays. Matplotlib is a multi-platform data visualization library built on NumPy arrays and designed to work with the broader SciPy stack. </div>
+                        </li>
+                        <li class="media">
+                            <strong>3.</strong>
+                            <div class="media-body"><strong>scikit-learn -</strong>Scikit-learn is a library in Python that provides many unsupervised and supervised learning algorithms.</div>
+                        </li>
+                        <li class="media">
+                            <strong>4.</strong>
+                            <div class="media-body"><strong>Django -</strong> Django is a Python-based free and open-source web framework that follows the model–template–views architectural pattern.</div>
+                        </li>
+                        <li class="media">
+                            <strong>5.</strong>
+                            <div class="media-body"><strong>VsCode -</strong> Visual Studio Code can be classed as an integrated development environment (IDE), meaning that developers can write and test code at the same time.</div>
+                        </li>
+                    
+                        <li class="media">
+                            <strong>6.</strong>
+                            <div class="media-body"><strong>GitHub -</strong>
+                                Github is a web-based platform used for version control. Git simplifies the process of working with other people and makes it easy to collaborate on projects</div>
+                        </li>
+                    </ul>
+
+
+                    
+                    
+                    <a class="btn-solid-reg mb-5" href="https://github.com/Prasadchaskar/Classification-of-Mushroom.git">Project Link</a>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of ex-basic-1 -->
+    <!-- end of basic -->
+
+{% endblock body %}

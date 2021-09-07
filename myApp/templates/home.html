@@ -1,0 +1,202 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+
+{% block body %}
+
+<!-- Header -->
+<header id="header" class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="text-container">
+                    <h1 class="h1-large">Mushroom Classification</h1>
+                </div> <!-- end of text-container -->
+            </div> <!-- end of col -->
+            <div class="col-lg-6">
+                <div class="image-container">
+                    <img class="img-fluid" src="static/web/images/mushroom.jpg" alt="alternative">
+                </div> <!-- end of image-container -->
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</header> <!-- end of header -->
+<!-- end of header -->
+
+
+<!-- Introduction -->
+<div class="basic-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <p>The Mushroom classification system is a machine learning-based supervised
+                    classification model which will help us
+                    to detect which mushroom is poisonous & which is edible.</p>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</div> <!-- end of basic-1 -->
+<!-- end of introduction -->
+
+<h1 style="display: block;text-align: center; color: rgb(75, 16, 211);">Mushroom Features Glossary</h1>
+<!-- Features -->
+<div id="features" class="cards-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <!-- Card -->
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Cap</h5>
+                        <p>The expanded, upper part of the mushroom whose surface is the pileus.
+                        </p>
+                    </div>
+                </div>
+                <!-- end of card -->
+
+                <!-- Card -->
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Cup (Volva)</h5>
+                        <p>Cup-shaped structure at the base of the mushroom.Not all mushrooms have a cup.</p>
+                    </div>
+                </div>
+                <!-- end of card -->
+
+                <!-- Card -->
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Gills (Lamellae)</h5>
+                        <p>Series of radially arranged flat surfaces located on the underside of the cap.</p>
+                    </div>
+                </div>
+                <!-- end of card -->
+
+                <!-- Card -->
+                <div class="card">
+                   
+                    <div class="card-body">
+                        <h5 class="card-title">Ring (Annulus)</h5>
+                        <p>Skirt-like ring of tissue circling the stem of mature mushrooms.Not all mushrooms have a ring.</p>
+                    </div>
+                </div>
+                <!-- end of card -->
+
+                <!-- Card -->
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Scale</h5>
+                        <p>Rough patches of tissue on the surface of the cap (scales are remnants of the veil).</p>
+                    </div>
+                </div>
+                <!-- end of card -->
+
+                <!-- Card -->
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Stalk </h5>
+                        <p>The main support of the mushroom it is topped by the cap.Not all mushrooms have a stalk.</p>
+                    </div>
+                </div>
+               
+                
+               
+               
+               
+                </div>
+                
+                <!-- end of card -->
+
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</div> <!-- end of cards-1 -->
+<!-- end of features -->
+
+<h1 style="display: block;text-align: center; color: rgb(75, 16, 211);">Mushroom Features by pictures</h1>
+<div class="container">
+    <div class="card-group">
+        <div class="card"><br>
+          <img src="static/web/images/mushroom-gill-spacing.jpg" class="card-img-top" ><br><br> 
+          <div class="card-body">
+            <h5 class="card-title">Gill Spacing</h5>
+          </div>   
+        </div>
+        
+        <div class="card">
+          <img src="static/web/images/mushroom-glossary.jpg" class="card-img-top" >
+          <div class="card-body">
+            <h5 class="card-title">Gill Glossary</h5>
+          </div> 
+        </div>
+        <div class="card">
+          <img src="static/web/images/mushroom-gill-tissue-arrangement.jpg" class="card-img-top" ><br><br>
+          <div class="card-body">
+            <h5 class="card-title">Gill Tissue Arrangement</h5>
+          </div> 
+        </div>
+      </div>
+      <br><br>
+      <div class="card-group">
+        <div class="card">
+          <img src="static/web/images/mushroom-ring-type.jpg" class="card-img-top" ><br><br>
+          <div class="card-body">
+            <h5 class="card-title">Ring Type</h5>
+          </div> 
+        </div>
+        <div class="card">
+          <img src="static/web/images/mushroom-stalk.jpg" class="card-img-top" ><br>
+          <div class="card-body">
+            <h5 class="card-title">Mushroom Stalk</h5>
+          </div> 
+        </div>
+        <div class="card">
+          <img src="static/web/images/mushroom-cap-shape.jpg" class="card-img-top" ><br><br><br>
+          <div class="card-body">
+            <h5 class="card-title">Mushroom Cap Shape</h5>
+          </div>
+        </div>
+      </div>
+</div>
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="social-container">
+                    <span class="fa-stack">
+                        <a href="https://github.com/Prasadchaskar">
+                           <i class="fa fa-github" style="font-size:36px"></i>
+                        </a>
+                    </span>
+                    <span class="fa-stack">
+                        <a href="https://www.linkedin.com/in/prasad-chaskar-42710b1a6">
+                            <i class="fa fa-linkedin" style="font-size:36px"></i>
+                        </a>
+                    </span>
+                </div> 
+            </div>
+        </div>
+    </div> 
+</div> 
+
+<!-- Copyright -->
+<div class="copyright">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-6">
+                <p class="p-small statement">Copyright © <a href="#your-link">Prasad Chaskar</a></p>
+            </div> <!-- end of col -->
+        </div> <!-- enf of row -->
+    </div> <!-- end of container -->
+</div> <!-- end of copyright -->
+<!-- end of copyright -->
+
+
+
+
+
+
+
+
+{% endblock body %}
